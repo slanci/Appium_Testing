@@ -58,10 +58,7 @@ public class automation {
         MobileElement el9 = (MobileElement) ad.findElementById("com.example.surveyapp:id/button");
         el9.click();
 
-        //Assert.assertEquals(ad.findElementById("com.example.surveyapp:id/submission_result").getText(),"Successful Submission");
         Assert.assertEquals(ad.findElementById("com.example.surveyapp:id/submission_result").getText(), "Successful Submission");
-        //softAssertion.assertAll();
-        //ad.resetApp();
     }
 
     @Test
@@ -88,9 +85,7 @@ public class automation {
         MobileElement el9 = (MobileElement) ad.findElementById("com.example.surveyapp:id/button");
         el9.click();
 
-        //Assert.assertEquals(ad.findElementById("com.example.surveyapp:id/submission_result").getText(),"Name can not be empty");
         Assert.assertEquals(ad.findElementById("com.example.surveyapp:id/submission_result").getText(), "Name can be empty");
-        //ad.resetApp();
     }
 
     @Test
@@ -117,10 +112,7 @@ public class automation {
         MobileElement el9 = (MobileElement) ad.findElementById("com.example.surveyapp:id/button");
         el9.click();
 
-        //Assert.assertEquals(ad.findElementById("com.example.surveyapp:id/submission_result").getText(),"Surname can not be empty");
         Assert.assertEquals(ad.findElementById("com.example.surveyapp:id/submission_result").getText(), "Surname can not be empty");
-        //softAssertion.assertAll();
-        //ad.resetApp();
 
     }
 
@@ -150,10 +142,7 @@ public class automation {
         MobileElement el9 = (MobileElement) ad.findElementById("com.example.surveyapp:id/button");
         el9.click();
 
-        //Assert.assertEquals(ad.findElementById("com.example.surveyapp:id/submission_result").getText(),"Name should only contain English letters");
         Assert.assertEquals(ad.findElementById("com.example.surveyapp:id/submission_result").getText(), "Name should only contain English letters");
-        //softAssertion.assertAll();
-        //ad.resetApp();
     }
 
     @Test
@@ -182,132 +171,7 @@ public class automation {
         MobileElement el9 = (MobileElement) ad.findElementById("com.example.surveyapp:id/button");
         el9.click();
 
-        //Assert.assertEquals(ad.findElementById("com.example.surveyapp:id/submission_result").getText(),"City should only contain English letters");
         Assert.assertEquals(ad.findElementById("com.example.surveyapp:id/submission_result").getText(), "City should only contain English letters");
-        //softAssertion.assertAll();
-        //ad.resetApp();
     }
-
-
-    /*@Test
-    public void testCase2(AndroidDriver ad, SoftAssert softAssertion) {
-        for (int test = 1; test <= 5; test++) {
-            if (test == 1) {
-
-
-            }
-            if (test == 2) {
-                *//*
-                    TEST CASE 2 FAILED SUBMISSION: EMPTY NAME
-                *//*
-                ad.manage().timeouts().implicitlyWait(2, TimeUnit.SECONDS);
-                MobileElement el2 = (MobileElement) ad.findElementById("com.example.surveyapp:id/surname_field");
-                el2.sendKeys("Inci");
-                MobileElement el3 = (MobileElement) ad.findElementById("com.example.surveyapp:id/city_field");
-                el3.sendKeys("Ankara");
-                MobileElement el4 = (MobileElement) ad.findElementById("com.example.surveyapp:id/female");
-                el4.click();
-                MobileElement el5 = (MobileElement) ad.findElementById("com.example.surveyapp:id/date_button");
-                el5.click();
-                MobileElement el6 = (MobileElement) ad.findElementByAccessibilityId("01 January 1900");
-                el6.click();
-                MobileElement el7 = (MobileElement) ad.findElementById("android:id/button1");
-                el7.click();
-                MobileElement el8 = (MobileElement) ad.findElementById("com.example.surveyapp:id/occupation_field");
-                el8.sendKeys("Student");
-                MobileElement el9 = (MobileElement) ad.findElementById("com.example.surveyapp:id/button");
-                el9.click();
-
-                //Assert.assertEquals(ad.findElementById("com.example.surveyapp:id/submission_result").getText(),"Name can not be empty");
-                softAssertion.assertEquals(ad.findElementById("com.example.surveyapp:id/submission_result").getText(), "Name can not be empty");
-                softAssertion.assertAll();
-                ad.resetApp();
-            }
-            if (test == 3) {
-                *//*
-                    TEST CASE 3 FAILED SUBMISSION: EMPTY SURNAME
-                *//*
-                ad.manage().timeouts().implicitlyWait(2, TimeUnit.SECONDS);
-                MobileElement el1 = (MobileElement) ad.findElementById("com.example.surveyapp:id/name_field");
-                el1.sendKeys("Sila");
-                MobileElement el3 = (MobileElement) ad.findElementById("com.example.surveyapp:id/city_field");
-                el3.sendKeys("Ankara");
-                MobileElement el4 = (MobileElement) ad.findElementById("com.example.surveyapp:id/female");
-                el4.click();
-                MobileElement el5 = (MobileElement) ad.findElementById("com.example.surveyapp:id/date_button");
-                el5.click();
-                MobileElement el6 = (MobileElement) ad.findElementByAccessibilityId("01 January 1900");
-                el6.click();
-                MobileElement el7 = (MobileElement) ad.findElementById("android:id/button1");
-                el7.click();
-                MobileElement el8 = (MobileElement) ad.findElementById("com.example.surveyapp:id/occupation_field");
-                el8.sendKeys("Student");
-                MobileElement el9 = (MobileElement) ad.findElementById("com.example.surveyapp:id/button");
-                el9.click();
-
-                //Assert.assertEquals(ad.findElementById("com.example.surveyapp:id/submission_result").getText(),"Surname can not be empty");
-                softAssertion.assertEquals(ad.findElementById("com.example.surveyapp:id/submission_result").getText(), "Surname can not be empty");
-                softAssertion.assertAll();
-                ad.resetApp();
-            }
-            if (test == 4) {
-                *//*
-                    TEST CASE 4 FAILED SUBMISSION: NAME SHOULD ONLY CONTAIN LETTERS
-                *//*
-                ad.manage().timeouts().implicitlyWait(2, TimeUnit.SECONDS);
-                MobileElement el1 = (MobileElement) ad.findElementById("com.example.surveyapp:id/name_field");
-                el1.sendKeys("193983");
-                MobileElement el2 = (MobileElement) ad.findElementById("com.example.surveyapp:id/surname_field");
-                el2.sendKeys("Inci");
-                MobileElement el3 = (MobileElement) ad.findElementById("com.example.surveyapp:id/city_field");
-                el3.sendKeys("Ankara");
-                MobileElement el4 = (MobileElement) ad.findElementById("com.example.surveyapp:id/female");
-                el4.click();
-                MobileElement el5 = (MobileElement) ad.findElementById("com.example.surveyapp:id/date_button");
-                el5.click();
-                MobileElement el6 = (MobileElement) ad.findElementByAccessibilityId("01 January 1900");
-                el6.click();
-                MobileElement el7 = (MobileElement) ad.findElementById("android:id/button1");
-                el7.click();
-                MobileElement el8 = (MobileElement) ad.findElementById("com.example.surveyapp:id/occupation_field");
-                el8.sendKeys("Student");
-                MobileElement el9 = (MobileElement) ad.findElementById("com.example.surveyapp:id/button");
-                el9.click();
-
-                //Assert.assertEquals(ad.findElementById("com.example.surveyapp:id/submission_result").getText(),"Name should only contain English letters");
-                softAssertion.assertEquals(ad.findElementById("com.example.surveyapp:id/submission_result").getText(), "Name should only contain English letters");
-                softAssertion.assertAll();
-                ad.resetApp();
-            }
-            if (test == 5) {
-                *//*
-                    TEST CASE 5 FAILED SUBMISSION: CITY SHOULD ONLY CONTAIN ENGLISH LETTERS
-                *//*
-                ad.manage().timeouts().implicitlyWait(2, TimeUnit.SECONDS);
-                MobileElement el1 = (MobileElement) ad.findElementById("com.example.surveyapp:id/name_field");
-                el1.sendKeys("Sila");
-                MobileElement el2 = (MobileElement) ad.findElementById("com.example.surveyapp:id/surname_field");
-                el2.sendKeys("Inci");
-                MobileElement el3 = (MobileElement) ad.findElementById("com.example.surveyapp:id/city_field");
-                el3.sendKeys("çankaya");
-                MobileElement el4 = (MobileElement) ad.findElementById("com.example.surveyapp:id/female");
-                el4.click();
-                MobileElement el5 = (MobileElement) ad.findElementById("com.example.surveyapp:id/date_button");
-                el5.click();
-                MobileElement el6 = (MobileElement) ad.findElementByAccessibilityId("01 January 1900");
-                el6.click();
-                MobileElement el7 = (MobileElement) ad.findElementById("android:id/button1");
-                el7.click();
-                MobileElement el8 = (MobileElement) ad.findElementById("com.example.surveyapp:id/occupation_field");
-                el8.sendKeys("Student");
-                MobileElement el9 = (MobileElement) ad.findElementById("com.example.surveyapp:id/button");
-                el9.click();
-
-                //Assert.assertEquals(ad.findElementById("com.example.surveyapp:id/submission_result").getText(),"City should only contain English letters");
-                softAssertion.assertEquals(ad.findElementById("com.example.surveyapp:id/submission_result").getText(), "City should only contain English letters");
-                softAssertion.assertAll();
-            }
-        }
-    }*/
 
 }
